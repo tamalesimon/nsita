@@ -28,8 +28,8 @@ handleSubmit = async e => {
     }
 };
 
-handleChange = event => {
-    const {value, name} = event.target;
+handleChange = e => {
+    const {value, name} = e.target;
 
     this.setState({[name]:value});
 }
@@ -37,7 +37,7 @@ render() {
     return (
         <div className='sign-in'>
 
-            <h2> I already have an account</h2>
+            <h2 className='title'> I already have an account</h2>
             <span>Please sign in with you email and password</span> 
 
             <form onSubmit={this.handleSubmit}>
